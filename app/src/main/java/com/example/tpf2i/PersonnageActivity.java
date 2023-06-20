@@ -1,11 +1,13 @@
 package com.example.tpf2i;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.example.tpf2i.adapter.PersonnageAdapter;
 import com.example.tpf2i.model.Personnage;
@@ -43,6 +45,8 @@ public class PersonnageActivity extends AppCompatActivity {
         recyclerViewPersonnage = findViewById(R.id.personnageRecycler);
 
         layoutManager = new GridLayoutManager(getApplicationContext(),2);
+
+
 
         // Client Retrofit
         retrofit = new Retrofit.Builder()
